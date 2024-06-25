@@ -26,9 +26,9 @@ describe('Unit Test /app1', () => {
     });
   });
 
-  describe('Unit Test /Rafid', () => {
+  describe('Unit Test /rafid', () => {
     it('should respond with "Hello nama saya Rafid"', async () => {
-      const response = await request(app).get('/Rafid');
+      const response = await request(app).get('/rafid');
       expect(response.status).toBe(200);
     });
   });

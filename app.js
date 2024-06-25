@@ -21,16 +21,13 @@ app.get('/app2', (req, res) => {
   res.send('Hello this App 2!')
 });
 
-app.get('/Rafid', (req, res) => {
-  res.send('Hello nama saya Rafid')
+app.get('/rafid', (req, res) => {
+  res.send('Hello nama saya rafid')
 });
 
 app.get('/users', (req, res, next) => {
   const sql = "SELECT * FROM tb_data ORDER BY id desc"
-  connection.query(sql,(error, fields) => {
-    if (error) {
-      return next (fields);
-    }
+  connection.query(sql,(fields) => {
     res.send(fields);
   })
 });
