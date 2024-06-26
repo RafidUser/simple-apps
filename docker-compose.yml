@@ -11,12 +11,12 @@ services:
 
   db:
     image: "mariadb"
-    restart: "always"
+    restart: always
     links:
       - phpmyadmin
     ports:
       - "3306"
-    environtment:
+    environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=training
       - MYSQL_USER=peseta
@@ -30,7 +30,7 @@ services:
       restart: always
       ports:
         - "8010:80"
-      environtment:
+      environment:
         - PMA_HOST=db  
 
     web:
