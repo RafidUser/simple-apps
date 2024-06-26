@@ -1,5 +1,6 @@
 services:
   backend:
+    build: ./apps
     restart: alawys
     links:
       - db
@@ -10,7 +11,7 @@ services:
 
   db:
     image: "mariadb"
-    restart: always
+    restart: "always"
     links:
       - phpmyadmin
     ports:
