@@ -1,6 +1,6 @@
 services:
   backend:
-    retart: alawys
+    restart: alawys
     links:
       - db
     ports:
