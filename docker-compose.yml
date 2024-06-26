@@ -19,7 +19,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=training
-      - MYSQL_USER=peseta
+      - MYSQL_USER=peserta
       - MYSQL_PASSWORD=password
     volumes:
     - ./apps/database/:/docker-entrypoint-initdb.d
