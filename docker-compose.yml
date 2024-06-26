@@ -3,12 +3,12 @@ services:
     build: ./apps
     restart: always
     links:
-      - db
+      - db 
     ports:
       - "3000"
     volumes:
       - app-data:/app/public/images
-
+  
   db:
     image: "mariadb"
     restart: always
@@ -26,20 +26,20 @@ services:
     - db-data:/var/lib/mysql
 
   phpmyadmin:
-      image: "phpmyadmin"
-      restart: always
-      ports:
-        - "8010:80"
-      environment:
-        - PMA_HOST=db  
+    image: "phpmyadmin"
+    restart: always
+    ports:
+      - "8010:80"
+    environment:
+      - PMA_HOST=db  
 
   web:
-      build: ./nginx
-      restart: always
-      ports:
-        - "80:80"
-      depends_on:
-        - backend
+    build: ./nginx
+    restart: always
+    ports:
+    - "80:80"
+    depends_on:
+    - backend 
 
 volumes:
   app-data:
