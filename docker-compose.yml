@@ -37,9 +37,9 @@ services:
       build: ./nginx
       restart: always
       ports:
-      - "80:80"
+        - "80:80"
       depend_on:
-      - backend
+        - backend
 
 volumes:
   app-data:
