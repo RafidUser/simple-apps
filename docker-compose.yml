@@ -25,7 +25,7 @@ services:
     - ./app/database/:/docker-entrypoint-initdb.d
     - db-data:/var/lib/mysql
 
-    phpmyadmin:
+  phpmyadmin:
       image: "phpmyadmin"
       restart: always
       ports:
@@ -33,7 +33,7 @@ services:
       environment:
         - PMA_HOST=db  
 
-    web:
+  web:
       build: ./nginx
       restart: always
       ports:
