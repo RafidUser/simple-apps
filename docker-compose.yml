@@ -38,7 +38,7 @@ services:
       restart: always
       ports:
         - "80:80"
-      depend_on:
+      depends_on:
         - backend
 
 volumes:
